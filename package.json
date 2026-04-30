@@ -1,0 +1,16 @@
+{
+  "name": "cathedral-acquisitions",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "pnpm --filter dashboard dev",
+    "build": "pnpm --filter dashboard build",
+    "typecheck": "pnpm -r typecheck",
+    "test": "pnpm -r test",
+    "deal:new": "tsx scripts/new-deal.sh"
+  },
+  "devDependencies": {
+    "tsx": "^4.7.1",
+    "typescript": "^5.4.5"
+  }
+}

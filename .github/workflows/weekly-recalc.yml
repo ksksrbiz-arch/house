@@ -1,0 +1,21 @@
+name: Weekly Recalc
+
+on:
+  schedule:
+    - cron: '0 13 * * 0'   # 13:00 UTC Sunday
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  recalc:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger financial-recalc edge function
+        run: |
+          curl -s -X POST \
+            "${{ secrets.SUPABASE_URL }}/functions/v1/financial-recalc" \
+            -H "Authorization: Bearer ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}" \
+            -H "Content-Type: application/json" \
+            -d '{}' \
+            --fail-with-body

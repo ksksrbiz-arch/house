@@ -1,0 +1,65 @@
+name: Tenant Application
+description: Track a new Section 8 voucher holder application
+title: "[Tenant] "
+labels: ["tenant", "voucher"]
+body:
+  - type: input
+    id: tenant_name
+    attributes:
+      label: Tenant Full Name
+      placeholder: "Jane Doe"
+    validations:
+      required: true
+
+  - type: input
+    id: voucher_number
+    attributes:
+      label: Voucher Number
+      placeholder: "VOC-2026-00123"
+
+  - type: input
+    id: pha
+    attributes:
+      label: PHA / Housing Authority
+      placeholder: "Cuyahoga Metropolitan Housing Authority"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: bedroom_size
+    attributes:
+      label: Voucher Bedroom Size
+      options:
+        - "1"
+        - "2"
+        - "3"
+        - "4"
+    validations:
+      required: true
+
+  - type: input
+    id: deal_address
+    attributes:
+      label: Target Property
+      placeholder: "1234 Main St, Cleveland OH"
+
+  - type: dropdown
+    id: status
+    attributes:
+      label: Current Status
+      options:
+        - referred
+        - screening
+        - approved
+        - rta_submitted
+        - hap_contract
+        - housed
+        - rejected
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      placeholder: "Any screening notes, timeline, or special circumstances."
