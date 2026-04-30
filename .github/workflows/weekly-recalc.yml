@@ -5,6 +5,8 @@ on:
     - cron: '0 13 * * 0'   # 13:00 UTC Sunday
   workflow_dispatch:
 
+permissions: {}
+
 jobs:
   recalc:
     runs-on: ubuntu-latest

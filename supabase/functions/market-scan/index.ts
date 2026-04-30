@@ -90,7 +90,7 @@ Deno.serve(async (_req) => {
       { headers: { 'Content-Type': 'application/json' } }
     );
   } catch (err) {
-    return new Response(JSON.stringify({ error: String(err) }), {
+    return new Response(JSON.stringify({ error: err instanceof Error ? err.message : 'Internal server error' }), {
       status: 500,
       headers: { 'Content-Type': 'application/json' },
     });

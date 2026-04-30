@@ -5,6 +5,8 @@ on:
     - cron: '0 9 * * *'   # 09:00 UTC daily
   workflow_dispatch:
 
+permissions: {}
+
 jobs:
   check-deadlines:
     runs-on: ubuntu-latest
