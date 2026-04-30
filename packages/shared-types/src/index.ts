@@ -233,6 +233,50 @@ export interface Lender {
   last_updated: string;
 }
 
+// ─── Documents ──────────────────────────────────────────────────────────────
+
+export type DocType =
+  | 'PSA'
+  | 'inspection_report'
+  | 'appraisal'
+  | 'loan_estimate'
+  | 'closing_disclosure'
+  | 'HAP_contract'
+  | 'RFTA'
+  | 'lease'
+  | 'tenant_id'
+  | 'voucher'
+  | 'tax_return'
+  | 'insurance'
+  | 'other';
+
+export interface DealDocument {
+  id: string;
+  deal_id: string;
+  name: string;
+  doc_type?: DocType;
+  storage_key: string;
+  uploaded_by?: string;
+  created_at: string;
+}
+
+// ─── Portfolio analytics ────────────────────────────────────────────────────
+
+export interface PortfolioMetrics {
+  totalDeals: number;
+  activeDeals: number;
+  closedDeals: number;
+  totalUnits: number;
+  totalAskingValue: number;
+  totalMonthlyGrossRent: number;
+  totalAnnualNOI: number;
+  weightedCapRate: number;       // %
+  weightedCoCReturn: number;     // %
+  weightedDSCR: number;
+  pipelineValue: number;         // active (non-dead, non-closed) asking
+  stageBreakdown: Record<string, number>;
+}
+
 // ─── PHA ─────────────────────────────────────────────────────────────────────
 
 export interface PHA {
