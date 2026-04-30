@@ -8,6 +8,8 @@ import Compliance from './pages/Compliance';
 import Finances from './pages/Finances';
 import Market from './pages/Market';
 import Lenders from './pages/Lenders';
+import Reports from './pages/Reports';
+import Documents from './pages/Documents';
 
 const NAV_ITEMS = [
   { to: '/dashboard', label: '🏠 Dashboard' },
@@ -18,6 +20,8 @@ const NAV_ITEMS = [
   { to: '/finances', label: '💰 Finances' },
   { to: '/market', label: '🗺️ Market' },
   { to: '/lenders', label: '🏦 Lenders' },
+  { to: '/documents', label: '📄 Documents' },
+  { to: '/reports', label: '📊 Reports' },
 ];
 
 export default function App() {
@@ -63,6 +67,8 @@ export default function App() {
             <Route path="/finances" element={<Finances />} />
             <Route path="/market" element={<Market />} />
             <Route path="/lenders" element={<Lenders />} />
+            <Route path="/documents" element={<Documents />} />
+            <Route path="/reports" element={<Reports />} />
           </Routes>
         </main>
       </div>
