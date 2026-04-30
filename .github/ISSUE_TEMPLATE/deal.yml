@@ -1,0 +1,73 @@
+name: New Deal
+description: Add a new Section 8 acquisition deal to the pipeline
+title: "[Deal] "
+labels: ["deal", "prospecting"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## New Deal — Cathedral Acquisitions
+        Fill out the details below. This issue will be tracked in the pipeline.
+
+  - type: input
+    id: address
+    attributes:
+      label: Property Address
+      placeholder: "1234 Main St"
+    validations:
+      required: true
+
+  - type: input
+    id: city_state
+    attributes:
+      label: City, State, ZIP
+      placeholder: "Cleveland, OH 44101"
+    validations:
+      required: true
+
+  - type: input
+    id: asking_price
+    attributes:
+      label: Asking Price
+      placeholder: "$150,000"
+    validations:
+      required: true
+
+  - type: input
+    id: units
+    attributes:
+      label: Number of Units
+      placeholder: "2"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: stage
+    attributes:
+      label: Current Stage
+      options:
+        - prospecting
+        - under_contract
+        - due_diligence
+        - financing
+        - closing
+    validations:
+      required: true
+
+  - type: input
+    id: pha
+    attributes:
+      label: PHA / Housing Authority
+      placeholder: "Cuyahoga Metropolitan Housing Authority"
+
+  - type: input
+    id: gross_rent
+    attributes:
+      label: Estimated Monthly Gross Rent
+      placeholder: "$2,000"
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      placeholder: Any deal-specific details, seller motivation, repair estimates, etc.

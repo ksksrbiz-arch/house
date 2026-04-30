@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "moduleResolution": "bundler",
+    "module": "ESNext",
+    "target": "ES2022",
+    "lib": ["ES2022"],
+    "paths": {
+      "@cathedral/shared-types": ["./packages/shared-types/src/index.ts"],
+      "@cathedral/calculations": ["./packages/calculations/src/index.ts"],
+      "@cathedral/nspire-engine": ["./packages/nspire-engine/src/index.ts"]
+    }
+  }
+}

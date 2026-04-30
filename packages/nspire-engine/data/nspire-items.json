@@ -1,0 +1,492 @@
+[
+  {
+    "id": "site-001",
+    "system": "site",
+    "deficiency": "Erosion or sinkholes on the property",
+    "severity": "severe",
+    "hud_ref": "NSPIRE-1.1.1",
+    "self_correctable": true,
+    "typical_cost_low": 500,
+    "typical_cost_high": 5000
+  },
+  {
+    "id": "site-002",
+    "system": "site",
+    "deficiency": "Hazardous walkways or parking areas",
+    "severity": "moderate",
+    "hud_ref": "NSPIRE-1.1.2",
+    "self_correctable": true,
+    "typical_cost_low": 200,
+    "typical_cost_high": 2000
+  },
+  {
+    "id": "site-003",
+    "system": "site",
+    "deficiency": "Broken or missing fencing",
+    "severity": "low",
+    "hud_ref": "NSPIRE-1.1.3",
+    "self_correctable": true,
+    "typical_cost_low": 300,
+    "typical_cost_high": 3000
+  },
+  {
+    "id": "site-004",
+    "system": "site",
+    "deficiency": "Inoperable exterior lighting",
+    "severity": "moderate",
+    "hud_ref": "NSPIRE-1.1.4",
+    "self_correctable": true,
+    "typical_cost_low": 50,
+    "typical_cost_high": 500
+  },
+  {
+    "id": "site-005",
+    "system": "site",
+    "deficiency": "Inadequate trash disposal",
+    "severity": "low",
+    "hud_ref": "NSPIRE-1.1.5",
+    "self_correctable": true,
+    "typical_cost_low": 100,
+    "typical_cost_high": 1000
+  },
+  {
+    "id": "ext-001",
+    "system": "building_exterior",
+    "deficiency": "Foundation cracks or structural damage",
+    "severity": "life_threatening",
+    "hud_ref": "NSPIRE-2.1.1",
+    "self_correctable": false,
+    "typical_cost_low": 5000,
+    "typical_cost_high": 50000
+  },
+  {
+    "id": "ext-002",
+    "system": "building_exterior",
+    "deficiency": "Roof damage, missing shingles, or water intrusion",
+    "severity": "severe",
+    "hud_ref": "NSPIRE-2.1.2",
+    "self_correctable": false,
+    "typical_cost_low": 2000,
+    "typical_cost_high": 20000
+  },
+  {
+    "id": "ext-003",
+    "system": "building_exterior",
+    "deficiency": "Broken or missing windows",
+    "severity": "moderate",
+    "hud_ref": "NSPIRE-2.1.3",
+    "self_correctable": true,
+    "typical_cost_low": 200,
+    "typical_cost_high": 2000
+  },
+  {
+    "id": "ext-004",
+    "system": "building_exterior",
+    "deficiency": "Inoperable or unsecured exterior doors",
+    "severity": "severe",
+    "hud_ref": "NSPIRE-2.1.4",
+    "self_correctable": true,
+    "typical_cost_low": 300,
+    "typical_cost_high": 3000
+  },
+  {
+    "id": "ext-005",
+    "system": "building_exterior",
+    "deficiency": "Deficient paint on exterior surfaces (pre-1978)",
+    "severity": "moderate",
+    "hud_ref": "NSPIRE-2.1.5",
+    "self_correctable": false,
+    "typical_cost_low": 1000,
+    "typical_cost_high": 10000
+  },
+  {
+    "id": "ext-006",
+    "system": "building_exterior",
+    "deficiency": "Stairway, railing, or balcony deficiency",
+    "severity": "life_threatening",
+    "hud_ref": "NSPIRE-2.1.6",
+    "self_correctable": false,
+    "typical_cost_low": 500,
+    "typical_cost_high": 8000
+  },
+  {
+    "id": "sys-001",
+    "system": "building_systems",
+    "deficiency": "Non-functional HVAC system",
+    "severity": "severe",
+    "hud_ref": "NSPIRE-3.1.1",
+    "self_correctable": false,
+    "typical_cost_low": 2000,
+    "typical_cost_high": 15000
+  },
+  {
+    "id": "sys-002",
+    "system": "building_systems",
+    "deficiency": "Plumbing leaks or water damage",
+    "severity": "severe",
+    "hud_ref": "NSPIRE-3.1.2",
+    "self_correctable": false,
+    "typical_cost_low": 500,
+    "typical_cost_high": 10000
+  },
+  {
+    "id": "sys-003",
+    "system": "building_systems",
+    "deficiency": "Electrical hazards (exposed wiring, overloaded panels)",
+    "severity": "life_threatening",
+    "hud_ref": "NSPIRE-3.1.3",
+    "self_correctable": false,
+    "typical_cost_low": 1000,
+    "typical_cost_high": 20000
+  },
+  {
+    "id": "sys-004",
+    "system": "building_systems",
+    "deficiency": "Inoperable elevator",
+    "severity": "moderate",
+    "hud_ref": "NSPIRE-3.1.4",
+    "self_correctable": false,
+    "typical_cost_low": 1000,
+    "typical_cost_high": 30000
+  },
+  {
+    "id": "sys-005",
+    "system": "building_systems",
+    "deficiency": "Fire suppression system deficiency",
+    "severity": "life_threatening",
+    "hud_ref": "NSPIRE-3.1.5",
+    "self_correctable": false,
+    "typical_cost_low": 500,
+    "typical_cost_high": 25000
+  },
+  {
+    "id": "sys-006",
+    "system": "building_systems",
+    "deficiency": "Missing or inoperable smoke/CO detectors",
+    "severity": "life_threatening",
+    "hud_ref": "NSPIRE-3.1.6",
+    "self_correctable": true,
+    "typical_cost_low": 30,
+    "typical_cost_high": 300
+  },
+  {
+    "id": "common-001",
+    "system": "common_areas",
+    "deficiency": "Mold or moisture in common areas",
+    "severity": "severe",
+    "hud_ref": "NSPIRE-4.1.1",
+    "self_correctable": false,
+    "typical_cost_low": 1000,
+    "typical_cost_high": 15000
+  },
+  {
+    "id": "common-002",
+    "system": "common_areas",
+    "deficiency": "Pest infestation in common areas",
+    "severity": "severe",
+    "hud_ref": "NSPIRE-4.1.2",
+    "self_correctable": false,
+    "typical_cost_low": 500,
+    "typical_cost_high": 5000
+  },
+  {
+    "id": "common-003",
+    "system": "common_areas",
+    "deficiency": "Inadequate lighting in common areas",
+    "severity": "moderate",
+    "hud_ref": "NSPIRE-4.1.3",
+    "self_correctable": true,
+    "typical_cost_low": 100,
+    "typical_cost_high": 1000
+  },
+  {
+    "id": "common-004",
+    "system": "common_areas",
+    "deficiency": "Blocked egress in common areas",
+    "severity": "life_threatening",
+    "hud_ref": "NSPIRE-4.1.4",
+    "self_correctable": true,
+    "typical_cost_low": 0,
+    "typical_cost_high": 500
+  },
+  {
+    "id": "unit-001",
+    "system": "unit",
+    "deficiency": "Inoperable unit entry door lock",
+    "severity": "severe",
+    "hud_ref": "NSPIRE-5.1.1",
+    "self_correctable": true,
+    "typical_cost_low": 50,
+    "typical_cost_high": 500
+  },
+  {
+    "id": "unit-002",
+    "system": "unit",
+    "deficiency": "Missing or broken window screens",
+    "severity": "low",
+    "hud_ref": "NSPIRE-5.1.2",
+    "self_correctable": true,
+    "typical_cost_low": 20,
+    "typical_cost_high": 200
+  },
+  {
+    "id": "unit-003",
+    "system": "unit",
+    "deficiency": "Inoperable heating in unit",
+    "severity": "severe",
+    "hud_ref": "NSPIRE-5.1.3",
+    "self_correctable": false,
+    "typical_cost_low": 500,
+    "typical_cost_high": 5000
+  },
+  {
+    "id": "unit-004",
+    "system": "unit",
+    "deficiency": "Plumbing deficiency in unit (leaks, no hot water)",
+    "severity": "severe",
+    "hud_ref": "NSPIRE-5.1.4",
+    "self_correctable": false,
+    "typical_cost_low": 200,
+    "typical_cost_high": 5000
+  },
+  {
+    "id": "unit-005",
+    "system": "unit",
+    "deficiency": "Electrical deficiency in unit",
+    "severity": "life_threatening",
+    "hud_ref": "NSPIRE-5.1.5",
+    "self_correctable": false,
+    "typical_cost_low": 200,
+    "typical_cost_high": 8000
+  },
+  {
+    "id": "unit-006",
+    "system": "unit",
+    "deficiency": "Missing or inoperable smoke detector in unit",
+    "severity": "life_threatening",
+    "hud_ref": "NSPIRE-5.1.6",
+    "self_correctable": true,
+    "typical_cost_low": 15,
+    "typical_cost_high": 50
+  },
+  {
+    "id": "unit-007",
+    "system": "unit",
+    "deficiency": "Mold or moisture intrusion in unit",
+    "severity": "severe",
+    "hud_ref": "NSPIRE-5.1.7",
+    "self_correctable": false,
+    "typical_cost_low": 500,
+    "typical_cost_high": 10000
+  },
+  {
+    "id": "unit-008",
+    "system": "unit",
+    "deficiency": "Pest infestation in unit",
+    "severity": "moderate",
+    "hud_ref": "NSPIRE-5.1.8",
+    "self_correctable": false,
+    "typical_cost_low": 150,
+    "typical_cost_high": 1500
+  },
+  {
+    "id": "unit-009",
+    "system": "unit",
+    "deficiency": "Deficient paint / lead hazard (pre-1978)",
+    "severity": "moderate",
+    "hud_ref": "NSPIRE-5.1.9",
+    "self_correctable": false,
+    "typical_cost_low": 500,
+    "typical_cost_high": 8000
+  },
+  {
+    "id": "unit-010",
+    "system": "unit",
+    "deficiency": "Broken or missing kitchen appliances",
+    "severity": "low",
+    "hud_ref": "NSPIRE-5.1.10",
+    "self_correctable": false,
+    "typical_cost_low": 200,
+    "typical_cost_high": 2000
+  },
+  {
+    "id": "unit-011",
+    "system": "unit",
+    "deficiency": "Bathroom fan inoperable or absent",
+    "severity": "low",
+    "hud_ref": "NSPIRE-5.1.11",
+    "self_correctable": true,
+    "typical_cost_low": 30,
+    "typical_cost_high": 200
+  },
+  {
+    "id": "unit-012",
+    "system": "unit",
+    "deficiency": "Inoperable windows (open/close/lock)",
+    "severity": "moderate",
+    "hud_ref": "NSPIRE-5.1.12",
+    "self_correctable": true,
+    "typical_cost_low": 100,
+    "typical_cost_high": 1000
+  },
+  {
+    "id": "unit-013",
+    "system": "unit",
+    "deficiency": "Trip hazards in unit (flooring, stairs)",
+    "severity": "moderate",
+    "hud_ref": "NSPIRE-5.1.13",
+    "self_correctable": true,
+    "typical_cost_low": 100,
+    "typical_cost_high": 2000
+  },
+  {
+    "id": "unit-014",
+    "system": "unit",
+    "deficiency": "Missing interior door hardware",
+    "severity": "low",
+    "hud_ref": "NSPIRE-5.1.14",
+    "self_correctable": true,
+    "typical_cost_low": 20,
+    "typical_cost_high": 200
+  },
+  {
+    "id": "unit-015",
+    "system": "unit",
+    "deficiency": "Carbon monoxide detector missing or inoperable",
+    "severity": "life_threatening",
+    "hud_ref": "NSPIRE-5.1.15",
+    "self_correctable": true,
+    "typical_cost_low": 20,
+    "typical_cost_high": 50
+  },
+  {
+    "id": "unit-016",
+    "system": "unit",
+    "deficiency": "Inadequate hot water supply",
+    "severity": "severe",
+    "hud_ref": "NSPIRE-5.1.16",
+    "self_correctable": false,
+    "typical_cost_low": 500,
+    "typical_cost_high": 3000
+  },
+  {
+    "id": "unit-017",
+    "system": "unit",
+    "deficiency": "Evidence of rodent activity",
+    "severity": "severe",
+    "hud_ref": "NSPIRE-5.1.17",
+    "self_correctable": false,
+    "typical_cost_low": 300,
+    "typical_cost_high": 3000
+  },
+  {
+    "id": "unit-018",
+    "system": "unit",
+    "deficiency": "Peeling or chipping ceiling material",
+    "severity": "low",
+    "hud_ref": "NSPIRE-5.1.18",
+    "self_correctable": true,
+    "typical_cost_low": 100,
+    "typical_cost_high": 500
+  },
+  {
+    "id": "unit-019",
+    "system": "unit",
+    "deficiency": "Refrigerator inoperable",
+    "severity": "moderate",
+    "hud_ref": "NSPIRE-5.1.19",
+    "self_correctable": false,
+    "typical_cost_low": 300,
+    "typical_cost_high": 1500
+  },
+  {
+    "id": "unit-020",
+    "system": "unit",
+    "deficiency": "Stove or range inoperable",
+    "severity": "moderate",
+    "hud_ref": "NSPIRE-5.1.20",
+    "self_correctable": false,
+    "typical_cost_low": 200,
+    "typical_cost_high": 1500
+  },
+  {
+    "id": "sys-007",
+    "system": "building_systems",
+    "deficiency": "Main electrical panel deficiencies",
+    "severity": "life_threatening",
+    "hud_ref": "NSPIRE-3.1.7",
+    "self_correctable": false,
+    "typical_cost_low": 2000,
+    "typical_cost_high": 30000
+  },
+  {
+    "id": "sys-008",
+    "system": "building_systems",
+    "deficiency": "Water heater safety valve deficiency",
+    "severity": "severe",
+    "hud_ref": "NSPIRE-3.1.8",
+    "self_correctable": false,
+    "typical_cost_low": 200,
+    "typical_cost_high": 2000
+  },
+  {
+    "id": "ext-007",
+    "system": "building_exterior",
+    "deficiency": "Gutter and downspout deficiency",
+    "severity": "moderate",
+    "hud_ref": "NSPIRE-2.1.7",
+    "self_correctable": true,
+    "typical_cost_low": 200,
+    "typical_cost_high": 2000
+  },
+  {
+    "id": "ext-008",
+    "system": "building_exterior",
+    "deficiency": "Deteriorated soffit or fascia",
+    "severity": "moderate",
+    "hud_ref": "NSPIRE-2.1.8",
+    "self_correctable": false,
+    "typical_cost_low": 300,
+    "typical_cost_high": 3000
+  },
+  {
+    "id": "site-006",
+    "system": "site",
+    "deficiency": "Drainage issues causing standing water",
+    "severity": "moderate",
+    "hud_ref": "NSPIRE-1.1.6",
+    "self_correctable": false,
+    "typical_cost_low": 500,
+    "typical_cost_high": 10000
+  },
+  {
+    "id": "common-005",
+    "system": "common_areas",
+    "deficiency": "Inoperable laundry room equipment",
+    "severity": "low",
+    "hud_ref": "NSPIRE-4.1.5",
+    "self_correctable": false,
+    "typical_cost_low": 200,
+    "typical_cost_high": 2000
+  },
+  {
+    "id": "common-006",
+    "system": "common_areas",
+    "deficiency": "Storage area fire hazards",
+    "severity": "life_threatening",
+    "hud_ref": "NSPIRE-4.1.6",
+    "self_correctable": true,
+    "typical_cost_low": 0,
+    "typical_cost_high": 1000
+  },
+  {
+    "id": "unit-021",
+    "system": "unit",
+    "deficiency": "Dryer exhaust vent disconnected or clogged",
+    "severity": "life_threatening",
+    "hud_ref": "NSPIRE-5.1.21",
+    "self_correctable": true,
+    "typical_cost_low": 50,
+    "typical_cost_high": 500
+  }
+]

@@ -1,0 +1,57 @@
+name: Lender Application
+description: Track a new lender application or pre-approval
+title: "[Lender] "
+labels: ["lender", "financing"]
+body:
+  - type: input
+    id: lender_name
+    attributes:
+      label: Lender Name
+      placeholder: "CrossCountry Mortgage"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: loan_type
+    attributes:
+      label: Loan Type
+      options:
+        - FHA
+        - DSCR
+        - Conventional
+        - Portfolio
+        - Hard Money
+    validations:
+      required: true
+
+  - type: input
+    id: deal_address
+    attributes:
+      label: Property Address
+      placeholder: "1234 Main St, Cleveland OH"
+    validations:
+      required: true
+
+  - type: input
+    id: loan_amount
+    attributes:
+      label: Loan Amount
+      placeholder: "$144,750"
+
+  - type: input
+    id: rate
+    attributes:
+      label: Interest Rate Quoted
+      placeholder: "7.125%"
+
+  - type: input
+    id: contact
+    attributes:
+      label: Loan Officer Contact
+      placeholder: "Jane Smith, jsmith@lender.com"
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes / Conditions
+      placeholder: "Pre-approval conditions, required docs, timeline, etc."

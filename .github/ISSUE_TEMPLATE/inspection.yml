@@ -1,0 +1,49 @@
+name: NSPIRE Inspection
+description: Schedule or record an NSPIRE inspection
+title: "[Inspection] "
+labels: ["inspection", "nspire"]
+body:
+  - type: input
+    id: deal_address
+    attributes:
+      label: Property Address
+      placeholder: "1234 Main St, Cleveland OH"
+    validations:
+      required: true
+
+  - type: input
+    id: inspection_date
+    attributes:
+      label: Inspection Date
+      placeholder: "2026-06-15"
+    validations:
+      required: true
+
+  - type: input
+    id: inspector
+    attributes:
+      label: Inspector Name / Company
+      placeholder: "ABC Inspections"
+
+  - type: dropdown
+    id: inspection_type
+    attributes:
+      label: Inspection Type
+      options:
+        - Initial HQS / NSPIRE
+        - Re-inspection
+        - Self-audit (pre-inspection)
+        - Annual
+    validations:
+      required: true
+
+  - type: textarea
+    id: known_issues
+    attributes:
+      label: Known Issues / Pre-audit Findings
+      placeholder: "List any known deficiencies identified during self-audit."
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
