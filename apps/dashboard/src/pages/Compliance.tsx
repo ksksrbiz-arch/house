@@ -48,7 +48,7 @@ export default function Compliance() {
 
       {sorted.length === 0 ? (
         <div className="card text-center py-16">
-          <p className="text-cathedral-navy-400">No deadlines found. Add deals and compliance items via Supabase Studio.</p>
+          <p className="text-cathedral-navy-400">No deadlines found. Add deals and compliance items via the API.</p>
         </div>
       ) : (
         <div className="card">

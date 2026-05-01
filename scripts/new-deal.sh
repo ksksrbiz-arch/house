@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
-# new-deal.sh — Interactive CLI to create a new deal in Supabase
+# new-deal.sh — Interactive CLI to create a new deal via Cloudflare Workers API
 # Usage: bash scripts/new-deal.sh
 
 set -euo pipefail
 
-if [ -z "${SUPABASE_URL:-}" ] || [ -z "${SUPABASE_SERVICE_ROLE_KEY:-}" ]; then
-  echo "❌ SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY must be set."
+if [ -z "${WORKER_URL:-}" ]; then
+  echo "❌ WORKER_URL must be set (e.g. https://cathedral-acquisitions.pages.dev)."
   echo "   Copy .env.example to .env and source it: source .env"
   exit 1
 fi
@@ -41,11 +41,8 @@ JSON
 )
 
 RESPONSE=$(curl -s -X POST \
-  "$SUPABASE_URL/rest/v1/deals" \
-  -H "apikey: $SUPABASE_SERVICE_ROLE_KEY" \
-  -H "Authorization: Bearer $SUPABASE_SERVICE_ROLE_KEY" \
+  "$WORKER_URL/api/deals" \
   -H "Content-Type: application/json" \
-  -H "Prefer: return=representation" \
   -d "$PAYLOAD")
 
 DEAL_ID=$(echo "$RESPONSE" | grep -o '"id":"[^"]*"' | head -1 | cut -d'"' -f4)
@@ -54,7 +51,6 @@ if [ -n "$DEAL_ID" ]; then
   echo ""
   echo "✅ Deal created!"
   echo "   ID: $DEAL_ID"
-  echo "   View: $SUPABASE_URL (Supabase Studio → Table Editor → deals)"
 else
   echo ""
   echo "❌ Failed to create deal. Response:"

@@ -11,10 +11,9 @@ jobs:
   scan:
     runs-on: ubuntu-latest
     steps:
-      - name: Trigger market-scan edge function
+      - name: Trigger market-scan worker
         run: |
           curl -s -X POST \
-            "${{ secrets.SUPABASE_URL }}/functions/v1/market-scan" \
-            -H "Authorization: Bearer ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}" \
+            "${{ secrets.WORKER_URL }}/api/market-scan" \
             -H "Content-Type: application/json" \
             --fail-with-body

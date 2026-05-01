@@ -11,11 +11,10 @@ jobs:
   recalc:
     runs-on: ubuntu-latest
     steps:
-      - name: Trigger financial-recalc edge function
+      - name: Trigger financial-recalc worker
         run: |
           curl -s -X POST \
-            "${{ secrets.SUPABASE_URL }}/functions/v1/financial-recalc" \
-            -H "Authorization: Bearer ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}" \
+            "${{ secrets.WORKER_URL }}/api/financial-recalc" \
             -H "Content-Type: application/json" \
             -d '{}' \
             --fail-with-body
