@@ -49,7 +49,7 @@ export default function Lenders() {
 
       {filtered.length === 0 ? (
         <div className="card text-center py-16">
-          <p className="text-cathedral-navy-400">No lenders found. Seed via supabase migrations.</p>
+          <p className="text-cathedral-navy-400">No lenders found. Run D1 migrations to seed data.</p>
         </div>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">

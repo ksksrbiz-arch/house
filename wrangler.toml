@@ -4,3 +4,9 @@ pages_build_output_dir = "apps/dashboard/dist"
 
 [vars]
 ENVIRONMENT = "production"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "cathedral-acquisitions-db"
+database_id = "YOUR_D1_DATABASE_ID"
+migrations_dir = "migrations"
