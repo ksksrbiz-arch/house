@@ -56,6 +56,37 @@ In repo Settings → Secrets and variables → Actions:
 | `SUPABASE_PROJECT_ID` | From your project URL |
 | `NETLIFY_AUTH_TOKEN` | Netlify → User settings → Applications |
 | `NETLIFY_SITE_ID` | Netlify → Site settings |
+| `CLOUDFLARE_API_TOKEN` | Cloudflare → My Profile → API Tokens (Pages: Edit) |
+| `CLOUDFLARE_ACCOUNT_ID` | Cloudflare → Workers & Pages → Account ID |
+
+## Deploy to Cloudflare Pages
+
+The dashboard deploys to Cloudflare Pages on every push to `main` via
+`.github/workflows/deploy-cloudflare.yml`.
+
+**One-time setup:**
+
+1. Create a Pages project named `cathedral-acquisitions` (Workers & Pages →
+   Create → Pages → Direct Upload).
+2. Create an API token with the **Cloudflare Pages: Edit** template.
+3. Add `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`, `VITE_SUPABASE_URL`,
+   and `VITE_SUPABASE_ANON_KEY` to GitHub Actions secrets.
+4. In Pages → Settings → Environment variables, mirror the `VITE_SUPABASE_*`
+   vars so preview deployments can reach Supabase.
+
+**Manual deploy:**
+
+```bash
+pnpm install
+pnpm deploy:cloudflare   # builds, then runs `wrangler pages deploy`
+```
+
+**Layout:**
+
+- `wrangler.toml` — Pages output dir (`apps/dashboard/dist`).
+- `apps/dashboard/public/_redirects` — SPA fallback to `/index.html`.
+- `apps/dashboard/public/_headers` — security headers + asset caching.
+- `functions/api/health.ts` — Pages Function exposed at `/api/health`.
 
 Optional: `MAILERLITE_API_KEY`, `NOTIFY_EMAIL`, `ZILLOW_API_KEY`
 

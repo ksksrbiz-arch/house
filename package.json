@@ -7,7 +7,8 @@
     "build": "pnpm --filter dashboard build",
     "typecheck": "pnpm -r typecheck",
     "test": "pnpm -r test",
-    "deal:new": "tsx scripts/new-deal.sh"
+    "deal:new": "tsx scripts/new-deal.sh",
+    "deploy:cloudflare": "pnpm build && pnpm --filter dashboard deploy:cloudflare"
   },
   "devDependencies": {
     "tsx": "^4.7.1",
